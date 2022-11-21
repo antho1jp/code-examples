@@ -2,6 +2,7 @@ import NodeAdapter from "@pollyjs/adapter-node-http";
 import { Polly } from "@pollyjs/core";
 import FSPersister from "@pollyjs/persister-fs";
 import fetch from "node-fetch";
+import { MODES } from "@pollyjs/utils";
 
 /*
   Register the adapters and persisters we want to use. This way all future
@@ -26,6 +27,7 @@ describe("Simple Example", function () {
       adapters: [NodeAdapter], // Hook into `fetch`
       persister: "fs",
       logLevel: "info", // Log requests to console
+      mode: MODES.RECORD,
     });
 
     const response = await fetch(
