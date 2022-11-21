@@ -1,2 +1,6 @@
 # code-examples
-Just some example code for learning purposes
+
+Install with `npm install`
+
+# To see memory leaks
+Run `npm run test -- --detectLeaks`
